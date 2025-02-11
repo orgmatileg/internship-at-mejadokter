@@ -1,1 +1,1 @@
-mempelajari git dan github
+mempelajari git dan github.
