@@ -1,1 +1,1 @@
-belajar git dan github dan praktek 
+belajar git dan github dan praktek.
