@@ -27,6 +27,148 @@
 - Password hashing dengan bcrypt
 - User authentication flow
 
+## Code Snippets 💻
+
+### Authentication Service
+
+```typescript
+@Injectable()
+export class AuthService {
+  constructor(
+    private usersService: UsersService,
+    private jwtService: JwtService
+  ) {}
+
+  async validateUser(email: string, password: string): Promise<any> {
+    const user = await this.usersService.findByEmail(email);
+
+    if (user && (await bcrypt.compare(password, user.password))) {
+      const { password, ...result } = user;
+      return result;
+    }
+    return null;
+  }
+
+  async login(user: any) {
+    try {
+      const payload = { email: user.email, sub: user.id };
+
+      return {
+        access_token: this.jwtService.sign(payload),
+      };
+    } catch (error) {
+      console.error("Login error:", error);
+      throw new UnauthorizedException("Invalid credentials");
+    }
+  }
+}
+```
+
+### JWT Strategy Implementation
+
+```typescript
+@Injectable()
+export class JwtStrategy extends PassportStrategy(Strategy) {
+  constructor() {
+    super({
+      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+      ignoreExpiration: false,
+      secretOrKey: process.env.JWT_SECRET,
+    });
+  }
+
+  async validate(payload: any) {
+    return { userId: payload.sub, email: payload.email };
+  }
+}
+```
+
+### Auth Controller
+
+```typescript
+@Controller("auth")
+export class AuthController {
+  constructor(private authService: AuthService) {}
+
+  @Post("login")
+  @UseGuards(LocalAuthGuard)
+  async login(@Request() req) {
+    return this.authService.login(req.user);
+  }
+
+  @Get("profile")
+  @UseGuards(JwtAuthGuard)
+  getProfile(@Request() req) {
+    return req.user;
+  }
+}
+```
+
+## Challenges & Solutions 🔨
+
+### 1. Environment Variable Configuration
+
+**Problem:**
+
+- Error saat mencoba mengakses JWT_SECRET dari .env file
+- Configuration tidak terbaca di service
+
+**Solution:**
+
+- Implement ConfigService dengan proper Dependency Injection
+- Setup environment module dengan validation
+
+**Learning:**
+
+- Pentingnya proper configuration management
+- Environment variable validation di NestJS
+
+### 2. Token Validation Issues
+
+**Problem:**
+
+- Token tidak tervalidasi dengan benar
+- Inconsistent error handling
+
+**Solution:**
+
+- Fix JWT Strategy configuration
+- Implement proper error handling flow
+- Add validation pipe
+
+**Learning:**
+
+- Understanding Passport strategy validation flow
+- Error handling best practices di NestJS
+
+### 3. Type Definition Challenges
+
+**Problem:**
+
+- Type errors untuk user object
+- Inconsistent payload types
+
+**Solution:**
+
+```typescript
+interface JwtPayload {
+  email: string;
+  sub: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  password: string;
+  createdAt: Date;
+}
+```
+
+**Learning:**
+
+- TypeScript type definition best practices
+- Interface vs Type di TypeScript
+
 ## Questions & Blockers ❓
 
 1. **Implementation Questions**
@@ -39,6 +181,19 @@
    - Rate limiting implementation untuk login endpoint?
    - Token expiration handling di client side?
    - Security measures untuk token storage?
+
+## Tomorrow's Plan 📅
+
+1. **Features**
+
+   - [ ] Implement refresh token mechanism
+   - [ ] Add rate limiting untuk security
+   - [ ] Setup unit tests untuk auth service
+
+2. **Improvements**
+   - [ ] Enhance error handling
+   - [ ] Improve type safety
+   - [ ] Add request validation
 
 ## Resources Used 📚
 
