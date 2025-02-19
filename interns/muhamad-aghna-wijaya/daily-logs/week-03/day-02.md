@@ -39,29 +39,29 @@ Relationship dalam database atau basis data adalah hubungan antara dua atau lebi
 ### 4 Kardinalitas atau Derajat Relasi.
 
 - Kardinalitas relasi menunjukkan tentang jumlah Entity yang dapat berelasi dengan Entity lainnya
-- Contoh misal pada kasus Toko Online. Entity Penjual bisa berelasi atau menjual dengan satu Entity Barang, atau lebih, atau bahkan tidak ada
+- Contoh misal pada kasus Toko Online. Entity Penjual bisa berelasi atau menjual dengan satu Entity Barang, atau lebih, atau bahkan tidak ada.
 
-#### 1. One to one (satu ke satu).
+  1. One to one (satu ke satu).
 
-- One to One artinya hubungan antara Entity A misalnya, hanya bisa berhubungan dengan Entity B dengan maksimal hanya satu Entity saja.
-- Begitu pula sebaliknya, Entity B hanya bisa berelasi dengan satu Entity A.
+  - One to One artinya hubungan antara Entity A misalnya, hanya bisa berhubungan dengan Entit B dengan maksimal hanya satu Entity saja.
+  - Begitu pula sebaliknya, Entity B hanya bisa berelasi dengan satu Entity A.
 
-#### 2. One to many (satu ke banyak)
+  2. One to many (satu ke banyak)
 
-- One to Many artinya hubungan antara Entity A misalnya, bisa berhubungan dengan banyak Entity B.
-- Tetapi tidak sebaliknya. Entity 8 hanya bisa berelasi dengan satu Entity A.
-- Si a memiliki 2 cabang dan b hanya 1,
+  - One to Many artinya hubungan antara Entity A misalnya, bisa berhubungan dengan banyak Entity B.
+  - Tetapi tidak sebaliknya. Entity 8 hanya bisa berelasi dengan satu Entity A.
+  - Si a memiliki 2 cabang dan b hanya 1,
 
-#### 3. Many to One (Banyak ke Satu)
+  3. Many to One (Banyak ke Satu)
 
-- Many to One artinya hubungan antara Entity A misalnya, hanya bisa berhubungan dengan satu Entity B.
-- Tetapi tidak sebaliknya, Entity B bisa berelasi ke banyak Entity A.
-- note hayan kebalikan dari one to many jadu di b sekarang memiliki dua cabang dan si a memiliki 1 cabang.
+  - Many to One artinya hubungan antara Entity A misalnya, hanya bisa berhubungan dengan satu Entity B.
+  - Tetapi tidak sebaliknya, Entity B bisa berelasi ke banyak Entity A.
+  - note hayan kebalikan dari one to many jadu di b sekarang memiliki dua cabang dan si a memiliki 1 cabang.
 
-#### 4. Many to Many (Banyak ke Banyak)
+  4. Many to Many (Banyak ke Banyak)
 
-- Many to Many artinya hubungan antara Entity A misalnya, bisa berhubungan dengan banyak Entity B.
-- Begitu juga sebaliknya, Entity B bisa berelasi ke banyak Entity A juga.
+  - Many to Many artinya hubungan antara Entity A misalnya, bisa berhubungan dengan banyak Entity B.
+  - Begitu juga sebaliknya, Entity B bisa berelasi ke banyak Entity A juga.
 
 ## Resources Used 📚
 
