@@ -12,16 +12,14 @@
 
 ### 1. Entity Relationship.
 
-#### 1. Entity.
+1. Entity.
 
 - Entity merupakan individu yang mewakili data (faktal yang nyata, dan bisa dibedakan dari sesuatu yang lain)
 - Saat menentukan sebuah Entity, kita perlu lihat ruang lingkup yang sedang kita kerjakan
-
-##### 1 Attribut.
-
+  1. Attribut.
 Setiap Entity pasti memiliki Attribute yang mendeskripsikan karakteristik dari Entity tersebu Penentuan Attribute dalam Entity biasanya berdasarkan fakta yang ada dan yang dibutuhkan dalam ruang lingkup nya saja.
 
-#### 2. Relationship.
+2. Relationship.
 
 Relationship dalam database atau basis data adalah hubungan antara dua atau lebih tabel berdasarkan kolom tertentu yang saling terhubung. Biasanya, hubungan ini dibentuk menggunakan Primary Key (PK) dan Foreign Key (FK) untuk menjaga integritas data.
 
