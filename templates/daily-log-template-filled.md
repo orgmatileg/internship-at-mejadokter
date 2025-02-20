@@ -169,7 +169,6 @@ interface User {
 - TypeScript type definition best practices
 - Interface vs Type di TypeScript
 
-
 ## Questions & Blockers ❓
 
 1. **Implementation Questions**
@@ -195,7 +194,6 @@ interface User {
    - [ ] Enhance error handling
    - [ ] Improve type safety
    - [ ] Add request validation
-
 
 ## Resources Used 📚
 
