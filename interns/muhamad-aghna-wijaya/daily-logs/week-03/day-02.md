@@ -45,13 +45,15 @@ Relationship dalam database atau basis data adalah hubungan antara dua atau lebi
 
   - One to One artinya hubungan antara Entity A misalnya, hanya bisa berhubungan dengan Entit B dengan maksimal hanya satu Entity saja.
   - Begitu pula sebaliknya, Entity B hanya bisa berelasi dengan satu Entity A.
+  ![alt text](../../assets/pict004.png)
+
 
   2. One to many (satu ke banyak)
 
   - One to Many artinya hubungan antara Entity A misalnya, bisa berhubungan dengan banyak Entity B.
   - Tetapi tidak sebaliknya. Entity 8 hanya bisa berelasi dengan satu Entity A.
   - Si a memiliki 2 cabang dan b hanya 1,
-
+![alt text](../../assets/pict005.png)
   3. Many to One (Banyak ke Satu)
 
   - Many to One artinya hubungan antara Entity A misalnya, hanya bisa berhubungan dengan satu Entity B.
@@ -62,7 +64,7 @@ Relationship dalam database atau basis data adalah hubungan antara dua atau lebi
 
   - Many to Many artinya hubungan antara Entity A misalnya, bisa berhubungan dengan banyak Entity B.
   - Begitu juga sebaliknya, Entity B bisa berelasi ke banyak Entity A juga.
-
+![alt text](../../assets/pict006.png)
 ## Resources Used 📚
 
 - [Belajar basis data untuk pemula](https://youtu.be/S4igMZFCvh8?si=Qds5Y0-nIs9h83A1)
