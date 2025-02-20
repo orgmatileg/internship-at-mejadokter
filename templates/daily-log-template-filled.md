@@ -13,6 +13,7 @@
 - Passport dan JWT integration di NestJS
 - Flow dari request hingga token validation
 - Best practices untuk auth implementation
+  `
 
 ### 2. NestJS Security Components
 
@@ -168,6 +169,7 @@ interface User {
 - TypeScript type definition best practices
 - Interface vs Type di TypeScript
 
+
 ## Questions & Blockers ❓
 
 1. **Implementation Questions**
@@ -193,6 +195,7 @@ interface User {
    - [ ] Enhance error handling
    - [ ] Improve type safety
    - [ ] Add request validation
+
 
 ## Resources Used 📚
 
