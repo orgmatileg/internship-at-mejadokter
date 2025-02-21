@@ -16,6 +16,7 @@
         - entity akan menjadi tabel
         - atributte akan menjadi kolom tabel
         |  entity  |
+        |-----|----|
         |email|nama|
 
 
@@ -42,4 +43,6 @@
         - menentukan derajat relasi
         - melengkapi attribute tambahan (apa bila diperlukan)
             
-        
+### note :  
+silahkan koreksi apabila ada kesalahan penulisan  
+19/02/25
