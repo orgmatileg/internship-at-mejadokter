@@ -13,3 +13,6 @@
     - entity pesanan : id, id_transaksi, status
 
 - relasi antar entity
+
+**note**  
+mohon koreksi apabila terdapat kesalahan
