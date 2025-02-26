@@ -118,4 +118,4 @@
 
 #### note  
 mohon koreksi apabila ada kesalahan  
-21/02/25
+21/02/25~
