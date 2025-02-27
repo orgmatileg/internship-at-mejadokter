@@ -14,24 +14,24 @@ membuat sebuah erd untuk sistem e commerce dengan tujuan untuk melatih fundament
 
 ### Yang Baru Dipelajari
 - Tech 1
-  - cara implementasi komponen komponen erd
-  - referensi dari beberapa toko online seperti shoopee
-  - kebingungan untuk melanjutkan hubungan antar entity
+  - proses payment yang lebih baik
 
 ## Daily Learning Notes
     -
 
+#### Challenges
+- Challenge 1
+  - kebingungan untuk relasi payment dan transaksi dan customer
+  - menyambungkan secara logika dasar
+  - sistem transaksi dan payment baru
 
-### [25/02/2025]
+
+### [27/02/2025]
 #### Apa yang dikerjakan hari ini
-- membuat entity yang akan digunakan
+- membuat sistem pembayaran baru agar bisa sesuai dengan request
 - menghubungkan entity tersebut
+- membuat alur proses transaksi dan payment baru
 
-
-### [26/02/2025]
-#### Apa yang dikerjakan hari ini
-- menambah entity yang akan digunakan
-- menghubungkan entity tersebut
 
 
 [link_erd](https://excalidraw.com/#json=TMxGWu9bWZvDar40Q2yR4,MpmCTmvi7yzBsWSuZYfXVQ)
