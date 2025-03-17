@@ -62,7 +62,7 @@
     konsep database dengan mysql, seperti pembuatan tabel, pengeditan tabel, penghapusan kolom. saya juga paham sintaks mysql di localhost xampp
 
 - [Challenges yang dihadapi]
-
+    bingung memilih mysql atau xampp yang harus digunakan
 ## Resources Used 📚
 
 -
