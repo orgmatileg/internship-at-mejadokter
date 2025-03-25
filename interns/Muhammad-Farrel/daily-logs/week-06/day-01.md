@@ -80,6 +80,6 @@
     cara mengelola database dengan syntaks mysql tetapi melalui localhost xampp
 
 - [Challenges yang dihadapi]
-    ada yang ntah salah ketik atau memang tidak ada seperti ifnull karena tidak bisa di coba
+    masih gagal mencoba user management
 ## Resources Used 📚
 - [video_database](https://youtu.be/xYBclb-sYQ4?si=fUA5CiMF1xBhYtyU)
