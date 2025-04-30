@@ -130,6 +130,22 @@
     - NaN (not a number), jika data string kita konversi ke number bukanlah data yang valid, maka hasil tersebut adalah NaN, jika di operasikan dengan number lain maka hasilnya tetap NaN
     - parseint dan parse float akan menerima string walaupun terdapat huruf dibelakang selama diawali dengan angka, contoh : parseInt("1salah");
     - isNaN() function, digunakan ketika kita ingin mengecek apakah sebuah number itu NaN atau bukan, maka kita gunakan isNaN, contoh : isNaN("hai");
+
+  - ### Array
+    - Array di javascript sangat mirip seperti array di php, yang mana bisa berubah dan bertambah.
+    - untuk membuat array, bisa seperti
+       let arraysaya = ["apel", "pisang", "anggur"], bisa kuga array kosong seperti let Arraykosong = []
+    - posisi data dalam array disebut index
+    - array dimulai dari 0
+    - array.indexOf digunakan untuk mencari index dari sebuah data
+    - operasi di Array
+      - array.push(value), menambah data ke Array
+      - array.length, untuk mendapatkan panjag length
+      - array[index], mendapat data di posisi index
+      - array[index] = value, mengubah data di posisi index
+      - delete array[index], menghapus data di posisi index, namun index tidak bergeser
+    - tidak ada batasan dalam array di javascript, bahkan kita bisa memasukan array ke dalam array(multidimension array)
+
 ## Resources Used 📚
 [tutorial_javascript](https://youtu.be/SDROba_M42g?si=KB1hDbnVRNBgtCVw)
 -
