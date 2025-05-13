@@ -181,4 +181,4 @@
   - for (const indeks of person) {}
 ## Resources Used 📚
 
--
+- [tutorial_javascript](https://youtu.be/SDROba_M42g?si=KB1hDbnVRNBgtCVw)
