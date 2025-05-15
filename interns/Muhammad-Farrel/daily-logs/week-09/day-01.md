@@ -120,7 +120,8 @@
                 constructor(first, second){
                     super(first);
                     this.akhir = second
-                }
+                }}
+    
 ## Resources Used 📚
 
 - [Tutorial_Javascript](https://youtu.be/aviAyIK5oSU?si=RIxxTd5u_Y9DCOGV)
