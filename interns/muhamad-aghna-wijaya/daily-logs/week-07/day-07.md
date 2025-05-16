@@ -97,4 +97,5 @@
 - Dengan mengikuti standarisasi Iterable, secara otomatis kita bisa melakukan iterasi terdapat data tersebut dengan menggunakan perulangan for...of
 - Contoh yang sudah mengikuti standarisasi Iterable adalah string, Array, Object, dan lain-lain
 
-
+## Resources Used 📚
+[tutorial_javascript](https://youtube.com/playlist?list=PL-CtdCApEFH8SS0Gsj9_a0cC0jypFEoSg&si=2GXqQE6Pyee4ME5O)
