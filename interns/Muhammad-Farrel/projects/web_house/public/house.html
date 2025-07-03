@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <title>house</title>
+</head>
+<body class="min-h-screen">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-md">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SellHouses</span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+            <a href="/" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+            </li>
+            <li>
+            <a href="/category" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">categories</a>
+            </li>
+            <li>
+            <a href="/house" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">House</a>
+            </li>
+            <li>
+            <a href="/buyers" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Buyers</a>
+            </li>
+            <li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+    <div class=" mx-auto rounded-3xl shadow-gray-400 shadow-2xl min-h-full min-w-2/3 max-w-2/3 p-4 my-25 bg-white">
+    <div class="max-w-screen-xl mx-auto flex flex-col items-center p-4 ">
+        <h1 class="text-3xl font-bold mb-4">House</h1>
+        <p class="text-gray-700">tambahkan rumah baru untuk dijual</p>
+    </div>
+        <form action="/house" method="POST" class="mx-8 font-bold md:mx-4">
+            <div class="mb-4">
+                <label for="nama" class="block text-gray-700">Nama Rumah</label>
+                <input type="text" id="name" name="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md font-light" placeholder="masukan nama rumah">
+            </div>
+            <div class="mb-4">
+                <label for="alamat">alamat</label>
+                <input type="text" id="address" name="address" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-md font-light" placeholder="masukan alamat"></input>
+            </div>
+            <div class="mb-4">
+                <label for="price">Price</label>
+                <input type="text" id="price" name="price" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-md font-light" placeholder="masukan harga"></input>
+            </div>
+            <div class="mb-4 flex flex-row justify-evenly gap-1">
+                <div class="min-w-1/3">
+                    <label for="bed" class="block">tempat tidur</label>
+                    <input type="number" id="bed" name="bed" class="mt-1 block w-full p-2 border border-gray-300 rounded-md font-light" placeholder="masukan jumlah kamar tidur">
+                </div>
+                <div class="min-w-1/3">
+                    <label for="bath" class="block">kamar mandi</label>
+                    <input type="number" id="bath" name="bath" class="mt-1 block w-full p-2 border border-gray-300 rounded-md font-light" placeholder="masukan jumlah kamar mandi">
+                </div>
+                <div class="min-w-1/3">
+                    <label for="sqft" class="block">kaki persegi</label>
+                    <input type="text" id="sqft" name="sqft" class="mt-1 block w-full p-2 border border-gray-300 rounded-md font-light" placeholder="masukan ukuran kaki persegi">
+                </div>
+            </div>
+            <div class="flex flex-row justify-evenly gap-2 mb-4">
+            <div class="min-w-1/2">
+                <label for="picture">Gambar</label>
+                <input type="file" id="picture" name="picture" class="mt-1 block w-full p-2 border-gray-300 border rounded-md font-light">
+            </div>
+            <div class="min-w-1/2">
+                <label for="category">kategori</label>
+                <select name="category_id" id="categories" class="mt-1 block p-2 border border-gray-300 rounded-md font-light w-full">
+                    <option value="">pilih kategori</option>
+                </select>
+            </div>
+            </div>
+            <div class="flex flex-row justify-evenly mb-4 gap-2">
+                <div class="min-w-1/2">
+                    <label for="seller">Penjual</label>
+                    <input type="text" id="seller" name="seller" class="mt-1 block w-full p-2 border border-gray-300 rounded-md font-light" placeholder="masukan nama">
+                </div>
+                <div class="min-w-1/2">
+                    <label for="contact">contact</label>
+                    <input type="text" id="contact" name="contact" class="mt-1 block w-full p-2 border border-gray-300 rounded-md font-light" placeholder="masukan nomor handphone">
+                </div>
+            </div>
+            <button type="submit" class="bg-blue-500 mt-5 text-white py-2 px-4 rounded-md">tambah rumah</button>
+        </form>
+    </div>
+
+    <div class="border mx-20 mt-8 p-4 bg-white rounded-xl shadow">
+  <h2 class="text-xl font-bold mb-4">Daftar Rumah</h2>
+
+  <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+          <th scope="col" class="px-6 py-3">No</th>
+          <th scope="col" class="px-6 py-3">Nama Rumah</th>
+          <th scope="col" class="px-6 py-3">Alamat</th>
+          <th scope="col" class="px-6 py-3">Harga</th>
+          <th scope="col" class="px-6 py-3">Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="houseTable">
+        <!-- Data rumah akan dimuat di sini -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+        <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="max-w-screen-xl mx-auto text-center">
+            <p>&copy; 2025 SellHouses. All rights reserved.</p>
+        </div>
+
+        <script>
+            async function loadcat() {
+                const res = await fetch('api/categories');
+                const data = await res.json();
+
+                const categ = document.getElementById('categories');
+                data.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat.id_category;
+                    option.textContent = cat.nameCat;
+                    categ.appendChild(option);
+                });
+            }
+
+            loadcat()
+
+            async function loadHouses() {
+    try {
+      const res = await fetch('/api/houses');
+      const houses = await res.json();
+      const tableBody = document.getElementById('houseTable');
+      tableBody.innerHTML = "";
+      let no = 1;
+
+      houses.forEach(item => {
+        const row = document.createElement('tr');
+        row.className = "bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600";
+        row.innerHTML = `
+          <td class="px-6 py-4">${no++}</td>
+          <td class="px-6 py-4">${item.house.name}</td>
+          <td class="px-6 py-4">${item.house.address}</td>
+          <td class="px-6 py-4">Rp ${parseInt(item.house.price).toLocaleString()}</td>
+          <td class="px-6 py-4 flex gap-2">
+            <a href="/house/edit/${item.house.id_house}" class="text-blue-600 hover:underline">Edit</a>
+            <button onclick="deleteHouse(${item.house.id_house})" class="text-red-600 hover:underline">Delete</button>
+          </td>
+        `;
+        tableBody.appendChild(row);
+      });
+    } catch (error) {
+      console.error("Gagal memuat data rumah", error);
+    }
+  }
+
+  async function deleteHouse(id) {
+    if (confirm("Yakin ingin menghapus rumah ini?")) {
+      try {
+        const res = await fetch(`/house/delete/${id}`, {
+          method: 'DELETE'
+        });
+        if (res.ok) {
+          alert("Rumah berhasil dihapus");
+          loadHouses();
+        } else {
+          alert("Gagal menghapus rumah");
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Terjadi kesalahan");
+      }
+    }
+  }
+
+  loadHouses();
+        </script>
+</body>
+</html>

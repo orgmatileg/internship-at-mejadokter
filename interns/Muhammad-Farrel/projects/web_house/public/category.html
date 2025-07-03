@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <title>kategori</title>
+</head>
+<body class="min-h-screen">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-md">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SellHouses</span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+            <a href="/" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+            </li>
+            <li>
+            <a href="/category" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">categories</a>
+            </li>
+            <li>
+            <a href="/house" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">House</a>
+            </li>
+            <li>
+            <a href="/buyers" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Buyers</a>
+            </li>
+            <li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+    <div class=" mx-auto rounded-3xl shadow-gray-400 shadow-2xl min-h-full min-w-2/3 max-w-2/3 p-4 my-25 bg-white">
+    <div class="max-w-screen-xl mx-auto flex flex-col items-center p-4 ">
+        <h1 class="text-3xl font-bold mb-4">kategori</h1>
+        <p class="text-gray-700">tambahkan kategori baru untuk tipe rumah mu</p>
+    </div>
+        <form action="/category" method="POST" class="mx-8 font-bold md:mx-4">
+            <div class="mb-4">
+                <label for="nama" class="block text-gray-700">Nama Kategori</label>
+                <input type="text" id="nameCat" name="nameCat" class="mt-1 block w-full p-2 border border-gray-300 rounded-md font-light" placeholder="masukan nama kategori" required>
+            </div>
+            <div class="mb-4">
+                <label for="detail">detail kategori</label>
+                <textarea id="detail" name="detail" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-md font-light" placeholder="jelaskan detail kategori" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md">tambah kategori</button>
+        </form>
+    </div>
+
+    <div class="border mx-auto min-w-200 max-w-260 shadow rounded-2xl bg-white p-4 my-8">
+  
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    No
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    nama kategori
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    detail
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Edit</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="categoryTable">
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4">
+                    Silver
+                </td>
+                <td class="px-6 py-4">
+                    Laptop
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    </div>
+
+
+        <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="max-w-screen-xl mx-auto text-center">
+            <p>&copy; 2025 SellHouses. All rights reserved.</p>
+        </div>
+
+    <script>
+        async function loadcat(params) {
+            try {
+                const res = await fetch('api/categories');
+            const data = await res.json();
+            const tableBody = document.getElementById('categoryTable');
+            tableBody.innerHTML = "";
+            let no = 1;
+            data.forEach(cat => {
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        ${no++}
+                    </th>
+                    <td class="px-6 py-4">
+                        ${cat.nameCat}
+                    </td>
+                    <td class="px-6 py-4">
+                        ${cat.detail}
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                        <a href="/category/edit/${cat.id_category}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                        <button onclick="deleteCat(${cat.id_category})" class="ml-4 font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
+                    </td>
+                </tr>
+                `;
+
+                tableBody.appendChild(row);
+
+            });
+            } catch (error) {
+                console.log('gagal mengambil kategori', error);
+            }
+        }
+        window.onload = loadcat;
+
+        async function deleteCat(id) {
+            if (!confirm("Yakin ingin menghapus kategori ini?")) return;
+
+            try {
+                const res = await fetch(`/category/${id}`, {
+                    method: 'DELETE'
+                });
+
+                if (res.ok) {
+                    alert("Kategori berhasil dihapus!");
+                    loadcat();
+                } else {
+                    alert("Gagal menghapus kategori.");
+                }
+            } catch (err) {
+                console.error("Error saat menghapus:", err);
+            }
+        }
+
+    </script>
+</body>
+</html>
