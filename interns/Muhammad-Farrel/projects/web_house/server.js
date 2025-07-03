@@ -99,12 +99,12 @@ app.post('/house', upload.single('picture'), async (req, res) => {
     await db.insert(house).values({
       name,
       address,
-      price, // jangan parseInt
+      price, 
       bed: parseInt(bed),
       bath: parseInt(bath),
       sqft,
       picture,
-      category_id: parseInt(category_id), // ini tetap harus int karena schema
+      category_id: parseInt(category_id), 
       seller,
       contact
     });
@@ -144,12 +144,12 @@ app.post('/house', upload.single('picture'), async (req, res) => {
 
         const conditions = [];
 
-        // Filter kategori
+      
         if (category) {
             conditions.push(eq(house.category_id, Number(category)));
         }
 
-        // Filter harga
+   
         if (minPrice) {
             conditions.push(gte(house.price, Number(minPrice) * 1_000_000));
         }
