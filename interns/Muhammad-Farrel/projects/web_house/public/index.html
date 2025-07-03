@@ -155,7 +155,6 @@
         }
     }
 
-    // Event listeners
     categorySelect.addEventListener('change', loadhouse);
     priceSelect.addEventListener('change', loadhouse);
     clearButton.addEventListener('click', () => {
@@ -163,8 +162,6 @@
         priceSelect.value = "";
         loadhouse();
     });
-
-    // Inisialisasi awal
     loadcat();
     loadhouse();
 </script>

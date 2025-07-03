@@ -107,7 +107,7 @@
                 const res = await fetch('api/categories');
             const data = await res.json();
             const tableBody = document.getElementById('categoryTable');
-            tableBody.innerHTML = ""; // Clear existing rows
+            tableBody.innerHTML = "";
             let no = 1;
             data.forEach(cat => {
                 
@@ -149,7 +149,7 @@
 
                 if (res.ok) {
                     alert("Kategori berhasil dihapus!");
-                    loadcat(); // refresh tabel
+                    loadcat();
                 } else {
                     alert("Gagal menghapus kategori.");
                 }

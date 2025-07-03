@@ -26,7 +26,6 @@
   <script>
     const id = window.location.pathname.split('/').pop();
 
-    // Ambil data kategori berdasarkan ID
     async function fetchCategory() {
       try {
         const res = await fetch(`/api/categories/${id}`);
@@ -39,7 +38,6 @@
       }
     }
 
-    // Submit perubahan
     document.getElementById('editForm').addEventListener('submit', async function (e) {
       e.preventDefault();
       const nameCat = document.getElementById('nameCat').value;
