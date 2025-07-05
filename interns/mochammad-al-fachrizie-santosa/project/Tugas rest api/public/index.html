@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daftar Rumah Dijual</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <nav class="navbar">
+  <div class="container">
+    <h2 class="logo">House</h2>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="buyer.html">Pemesanan</a>
+      <a href="kategori.html">Kategori</a>
+      <a href="tambah.html">Tambah Rumah</a>
+      <a href="submission.html">Daftar Buyer</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="filter-form">
+  <input type="text" id="search" placeholder="Cari nama rumah...">
+  
+  <select id="filterKategori">
+    <option value="">Semua Kategori</option>
+  </select>
+
+  <input type="number" id="minHarga" placeholder="Harga Minimal">
+  <input type="number" id="maxHarga" placeholder="Harga Maksimal">
+
+  <button onclick="fetchRumah()">Cari</button>
+</div>
+
+<div id="rumah-list" class="rumah-list"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

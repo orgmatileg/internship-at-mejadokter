@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kelola Kategori Rumah</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+  <div class="container">
+    <h2 class="logo">House</h2>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="buyer.html">Pemesanan</a>
+      <a href="kategori.html">Kategori</a>
+      <a href="tambah.html">Tambah Rumah</a>
+      <a href="submission.html">Daftar Buyer</a>
+    </div>
+  </div>
+</nav>
+
+
+  <h1>Kelola Kategori Rumah</h1>
+<h2>Tambah / Edit Kategori</h2>
+
+<div class="form-card">
+  <form id="formKategori">
+    <input type="hidden" name="id">
+    <input type="text" name="nama" placeholder="Nama Kategori" required><br>
+    <button type="submit" class="btn success">Simpan</button>
+  </form>
+  <div class="btn-center">
+    <a href="index.html" class="btn primary">Kembali ke Halaman Utama</a>
+  </div>
+</div>
+
+
+  <h2>Daftar Kategori</h2>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama Kategori</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="tabelKategori">
+    </tbody>
+  </table>
+
+  <script src="js/kategori.js"></script>
+</body>
+</html>

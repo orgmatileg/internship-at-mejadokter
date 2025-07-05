@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tambah Rumah</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <h2 class="logo">House</h2>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="buyer.html">Pemesanan</a>
+        <a href="kategori.html">Kategori</a>
+        <a href="tambah.html">Tambah Rumah</a>
+        <a href="submission.html">Daftar Buyer</a>
+      </div>
+    </div>
+  </nav>
+
+<h1>Tambah Rumah Baru</h1>
+
+<div class="form-card">
+  <form id="formRumah" enctype="multipart/form-data">
+    <input type="text" name="nama" placeholder="Nama Rumah" required><br>
+    <input type="text" name="deskripsi" placeholder="Deskripsi"><br>
+    <input type="number" name="harga" placeholder="Harga" required><br>
+    <input type="number" name="kategori_id" placeholder="ID Kategori" required><br>
+    <input type="file" name="gambar" accept="image/*"><br>
+    <button type="submit" class="btn success">Tambah Rumah</button>
+  </form>
+
+  <div class="btn-center">
+    <a href="index.html" class="btn primary">Kembali ke Halaman Utama</a>
+  </div>
+</div>
+
+  <script src="js/tambah.js"></script>
+</body>
+</html>
