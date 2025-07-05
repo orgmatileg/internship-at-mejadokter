@@ -1,0 +1,91 @@
+{
+  "info": {
+    "name": "API House",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Kategori",
+      "item": [
+        {
+          "name": "List Kategori",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:5000/kategori"
+          }
+        },
+        {
+          "name": "Tambah Kategori",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "http://localhost:5000/kategori",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nama\": \"Kategori Baru\"\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Rumah",
+      "item": [
+        {
+          "name": "List Rumah",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:5000/rumah"
+          }
+        },
+        {
+          "name": "Tambah Rumah",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:5000/rumah",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "nama", "value": "Rumah Contoh", "type": "text" },
+                { "key": "deskripsi", "value": "Deskripsi contoh", "type": "text" },
+                { "key": "harga", "value": "500000000", "type": "text" },
+                { "key": "kategori_id", "value": "1", "type": "text" },
+                { "key": "gambar", "type": "file" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Submission Buyer",
+      "item": [
+        {
+          "name": "List Pemesanan",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:5000/submission"
+          }
+        },
+        {
+          "name": "Tambah Pemesanan",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "http://localhost:5000/submission",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nama\": \"Budi\",\n  \"no_hp\": \"08123456789\",\n  \"email\": \"budi@example.com\",\n  \"rumah_id\": 1\n}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000"
+    }
+  ]
+}
