@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./output.css" />
+  <title>Edit gunung</title>
+</head>
+
+<body class="min-h-screen bg-gray-100">
+
+  <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-xl shadow">
+    <h2 class="text-2xl font-bold mb-4">Edit gunung</h2>
+
+    <form id="editForm" enctype="multipart/form-data" method="POST">
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block mb-1">Nama gunung</label>
+          <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-md" required>
+        </div>
+        <div>
+          <label class="block mb-1">Alamat</label>
+          <input type="text" id="alamat" name="alamat" class="w-full p-2 border border-gray-300 rounded-md" required>
+        </div>
+        <div>
+          <label class="block mb-1">Harga</label>
+          <input type="text" id="price" name="price" class="w-full p-2 border border-gray-300 rounded-md" required>
+        </div>
+        <div>
+          <label class="block mb-1">Kebun sawit</label>
+          <input type="number" id="bed" name="bed" class="w-full p-2 border border-gray-300 rounded-md" required>
+        </div>
+        <div>
+          <label class="block mb-1">parking heli</label>
+          <input type="number" id="bath" name="bath" class="w-full p-2 border border-gray-300 rounded-md" required>
+        </div>
+        <div>
+          <label class="block mb-1">Ukuran (sqft)</label>
+          <input type="text" id="sqft" name="sqft" class="w-full p-2 border border-gray-300 rounded-md" required>
+        </div>
+        <div>
+          <label class="block mb-1">Penjual</label>
+          <input type="text" id="seller" name="seller" class="w-full p-2 border border-gray-300 rounded-md" required>
+        </div>
+        <div>
+          <label class="block mb-1">Kontak</label>
+          <input type="text" id="contact" name="contact" class="w-full p-2 border border-gray-300 rounded-md" required>
+        </div>
+        <div>
+          <label class="block mb-1">Kategori</label>
+          <select name="category_id" id="categories" class="w-full p-2 border border-gray-300 rounded-md" required>
+            <option value="">Pilih kategori</option>
+          </select>
+        </div>
+        <div>
+          <label class="block mb-1">Gambar Baru (jika ingin ganti)</label>
+          <input type="file" name="picture" id="picture" class="w-full p-2 border border-gray-300 rounded-md">
+        </div>
+      </div>
+      <button type="submit" class="mt-5 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Simpan
+        Perubahan</button>
+    </form>
+  </div>
+
+  <script>
+    const id = window.location.pathname.split('/').pop();
+
+    async function loadCategories() {
+      const res = await fetch('/api/categories');
+      const data = await res.json();
+      const select = document.getElementById('categories');
+      data.forEach(cat => {
+        const option = document.createElement('option');
+        option.value = cat.id_category;
+        option.textContent = cat.nameCat;
+        select.appendChild(option);
+      });
+    }
+
+    async function loadHouse() {
+      try {
+        const res = await fetch(`/api/houses/${id}`);
+        const house = await res.json();
+
+        document.getElementById('name').value = house.name;
+        document.getElementById('alamat').value = house.address;
+        document.getElementById('price').value = house.price;
+        document.getElementById('bed').value = house.bed;
+        document.getElementById('bath').value = house.bath;
+        document.getElementById('sqft').value = house.sqft;
+        document.getElementById('seller').value = house.seller;
+        document.getElementById('contact').value = house.contact;
+        document.getElementById('categories').value = house.category_id;
+      } catch (error) {
+        console.error("Gagal mengambil data rumah", error);
+      }
+    }
+
+    document.getElementById('editForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+
+      try {
+        const res = await fetch(`/house/edit/${id}`, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (res.ok) {
+          alert("gunung berhasil diperbarui");
+          window.location.href = "/house";
+        } else {
+          alert("Gagal memperbarui gunung");
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Terjadi kesalahan");
+      }
+    });
+
+    loadCategories();
+    loadHouse();
+  </script>
+</body>
+
+</html>
